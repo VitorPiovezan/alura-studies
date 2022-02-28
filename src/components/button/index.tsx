@@ -1,9 +1,10 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import './style.scss';
+import style from './Button.module.scss';
 
 class Button extends React.Component {
   render() {
-    return <button className="botao">Button</button>;
+    return <button className={style.botao}>{this.props.children}</button>;
   }
 }
 

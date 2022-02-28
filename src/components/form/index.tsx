@@ -1,11 +1,12 @@
+import { strictEqual } from 'assert';
 import React from 'react';
 import Button from '../button';
-import './style.scss';
+import style from './Form.module.scss';
 class Form extends React.Component {
   render() {
     return (
-      <form className="novaTarefa">
-        <div className="inputContainer">
+      <form className={style.novaTarefa}>
+        <div className={style.inputContainer}>
           <label htmlFor="task">Adicione um novo estudo: </label>
           <input
             type="text"
@@ -15,7 +16,7 @@ class Form extends React.Component {
             required
           />{' '}
         </div>
-        <div className="inputContainer">
+        <div className={style.inputContainer}>
           <label htmlFor="time">Tempo: </label>
           <input
             type="time"
@@ -27,7 +28,7 @@ class Form extends React.Component {
             required
           />
         </div>
-        <Button />
+        <Button>Adicionar</Button>
       </form>
     );
   }
